@@ -1,0 +1,79 @@
+==== DevTools (useful settings)
+
+[x] Preserve log
+[x] Selected context only
+
+==== RESTful API
+
+json-server (RESTful API): (Don't forget to star if you like!)
+https://github.com/typicode/json-server
+
+CREATE      -> POST     /posts/
+READ        -> GET      /posts/
+UPDATE      -> PUT      /posts/{ID} -> /posts/3
+DELETE      -> DELETE   /posts/{ID} -> /posts/3
+
+Run json-server at custom port: json-server db.json --port 3001
+
+Read more about RESTful-API:
+https://searchapparchitecture.techtarget.com/definition/RESTful-API
+
+
+==== Q & A
+Q: ama ehoume allo object mesa sto json ti kanoume?
+
+A: const val = {
+    obj: {
+        a: 1,
+        b: {
+            c: 3
+        }
+    }
+}
+
+let JSONstr = JSON.stringify( val );
+
+let data = JSON.parse( JSONstr );
+
+data.obj.b.c;
+
+==== Computed Property Names: 
+
+Example: const obj = { ["C"+"C"]: 1 } 
+
+READ: https://tylermcginnis.com/computed-property-names/ 
+
+==== Object & Array Spread Operator (JS): 
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax#Spread_in_object_literals
+
+==== MIME TYPES (json) & Character Set Encoding
+- MIME TYPES / application/json: https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types/Common_types
+
+Setting UTF8 encoding in fetch() when setting the HTTP headers:
+(Used to avoid possible problems with special characters and languages)
+
+fetch( URL, {
+
+  method: ...,
+  headers: {
+    'Content-Type' : 'application/json;charset=utf-8'
+  }
+
+});
+
+==== React Stuff
+- REACT | Controlled Components: https://reactjs.org/docs/forms.html#controlled-components
+- REACT | Hooks | useEffect: https://reactjs.org/docs/hooks-effect.html
+- REACT | Hooks | useState: https://reactjs.org/docs/hooks-state.html 
+
+==== What to do next?
+
+- Complete the UPDATE CRUD operation
+
+- Refactor and remove redundant code (D.R.Y.)
+
+- Create a Wrapper around Fetch to make your life easy
+https://jasonwatmore.com/post/2020/04/18/fetch-a-lightweight-fetch-wrapper-to-simplify-http-requests
+
+- Try `Axios` Library for the Ajax Requests
