@@ -2,6 +2,7 @@
 A create, read, update, delete app with react
 
 * [How to install and run react applications](https://thinkster.io/tutorials/create-react-app) - React
+* You need to replace your *new_project_name src file with this one*
 
 # Sample photos on how Rest Web Service work
 
